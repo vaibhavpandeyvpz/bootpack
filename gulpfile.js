@@ -6,7 +6,6 @@ const data = require('gulp-data');
 const del = require('del');
 const extreplace = require('gulp-ext-replace');
 const frontmatter = require('front-matter');
-const gulpif = require('gulp-if');
 const log = require('gulplog');
 const nunjucks = require('gulp-nunjucks');
 const plumber = require('gulp-plumber');
@@ -14,8 +13,6 @@ const sass = require('gulp-sass');
 const tilde = require('node-sass-tilde-importer');
 const using = require('gulp-using');
 const watch = require('gulp-watch');
-
-const PRODUCTION = process.env.NODE_ENV === 'production';
 
 const plumberr = function(error) {
   log.error(error);
@@ -36,7 +33,13 @@ gulp.task('css', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulpif(PRODUCTION, cssnano()))
+    .pipe(gulp.dest('build/css'))
+    .pipe(using({
+      filesize: true,
+      prefix: 'Saved '
+    }))
+    .pipe(cssnano())
+    .pipe(extreplace('.min.css', '.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(using({
       filesize: true,
