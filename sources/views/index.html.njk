@@ -4,8 +4,70 @@ title: https://bootskins.github.io/buildpack/
 
 {% extends '_layout.html.njk' %}
 
-{% block content %}
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    .modal-wrapper {
+      background: #9f9f9f;
+      position: relative;
+    }
+    .modal-wrapper .modal {
+      bottom: auto;
+      display: block;
+      left: auto;
+      position: relative;
+      right: auto;
+      top: auto;
+      z-index: 1;
+    }
+    .modal-wrapper .modal-dialog {
+      width: 90%
+    }
+    .progress {
+      margin-bottom: 12px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
   <div class="container">
-    <h1># buildpack</h1>
+    {% include '_component_jumbotron.html.njk' %}
+    {% include '_component_navbar.html.njk' %}
+    {% include '_component_breadcrumb.html.njk' %}
+    {% include '_component_cards.html.njk' %}
+    {% include '_component_modal.html.njk' %}
+    <div class="row">
+      <div class="col-md-6">
+        {% include '_component_tabs.html.njk' %}
+      </div>
+      <div class="col-md-6">
+        {% include '_component_pills.html.njk' %}
+      </div>
+    </div>
+    {% include '_component_list_groups.html.njk' %}
+    {% include '_component_buttons.html.njk' %}
+    {% include '_component_pagination.html.njk' %}
+    {% include '_component_alerts.html.njk' %}
+    {% include '_component_badges.html.njk' %}
+    {% include '_component_progress_bars.html.njk' %}
+    {% include '_component_tables.html.njk' %}
+    <div class="row">
+      <div class="col-md-6">
+        {% include '_component_tooltip.html.njk' %}
+      </div>
+      <div class="col-md-6">
+        {% include '_component_popovers.html.njk' %}
+      </div>
+    </div>
   </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ super() }}
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 {% endblock %}

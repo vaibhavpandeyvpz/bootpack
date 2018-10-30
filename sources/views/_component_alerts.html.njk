@@ -1,0 +1,38 @@
+{% macro alert(variant) %}
+  <div class="alert alert-dismissible alert-{{ variant }}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>{{ variant|capitalize }}!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+{% endmacro %}
+
+<h3 id="component-alerts">Alerts <a class="text-muted" href="#component-alerts">#</a></h3>
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Success!</h4>
+  <p class="mb-0">Duis sollicitudin velit nec sagittis aliquet. Integer <a href="#" class="alert-link">ultrices diam blandit dictum</a> convallis. Curabitur rutrum nunc nulla, quis congue ante consectetur eu.</p>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    {{ alert('info') }}
+  </div>
+  <div class="col-md-4">
+    {{ alert('warning') }}
+  </div>
+  <div class="col-md-4">
+    {{ alert('danger') }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    {{ alert('primary') }}
+  </div>
+  <div class="col-md-3">
+    {{ alert('secondary') }}
+  </div>
+  <div class="col-md-3">
+    {{ alert('light') }}
+  </div>
+  <div class="col-md-3">
+    {{ alert('dark') }}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{% macro popover(placement) %}
+  <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" title="Popover" data-placement="{{ placement }}" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+    {{ placement|capitalize }}
+  </button>
+{% endmacro %}
+
+<h3 id="component-popovers">Popovers <a class="text-muted" href="#component-popovers">#</a></h3>
+<div class="mb-3">
+  {{ popover('top') }}
+  {{ popover('right') }}
+  {{ popover('bottom') }}
+  {{ popover('left') }}
+</div>

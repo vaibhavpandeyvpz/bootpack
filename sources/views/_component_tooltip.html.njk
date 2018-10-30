@@ -1,0 +1,13 @@
+{% macro tooltip(placement) %}
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="{{ placement }}" title="Tooltip on {{ placement }}">
+    {{ placement|capitalize }}
+  </button>
+{% endmacro %}
+
+<h3 id="component-tooltips">Tooltips <a class="text-muted" href="#component-tooltips">#</a></h3>
+<div class="mb-3">
+  {{ tooltip('top') }}
+  {{ tooltip('right') }}
+  {{ tooltip('bottom') }}
+  {{ tooltip('left') }}
+</div>

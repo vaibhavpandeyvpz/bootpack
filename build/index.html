@@ -7,19 +7,990 @@
     <title>https://bootskins.github.io/buildpack/</title>
   
   
-    <link rel="stylesheet" href="/css/bootstrap.css">
   
+    <link rel="stylesheet" href="css/bootstrap.css">
+  
+  <style>
+    .modal-wrapper {
+      background: #9f9f9f;
+      position: relative;
+    }
+    .modal-wrapper .modal {
+      bottom: auto;
+      display: block;
+      left: auto;
+      position: relative;
+      right: auto;
+      top: auto;
+      z-index: 1;
+    }
+    .modal-wrapper .modal-dialog {
+      width: 90%
+    }
+    .progress {
+      margin-bottom: 12px;
+    }
+  </style>
+
 </head>
 <body>
 
   <div class="container">
-    <h1># buildpack</h1>
+    <h3 id="component-jumbotron">Jumbotron <a class="text-muted" href="#component-jumbotron">#</a></h3>
+<div class="jumbotron">
+  <h1 class="display-3">Buildpack</h1>
+  <p class="lead">Build-tools setup for customizing and creating skins for Bootstrap.</p>
+  <hr class="my-4">
+  <p>It is powered by <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://gulpjs.com/" target="_blank">Gulp</a>, <a href="https://sass-lang.com/" target="_blank">Sass</a>, <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> and obviously, <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://github.com/bootskins/buildpack" role="button" target="_blank">Github</a>
+  </p>
+</div>
+
+    <h3 id="component-navbar">Navbar <a class="text-muted" href="#component-navbar">#</a></h3>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar-primary">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-secondary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar-secondary">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <h3 id="component-breadcrumb">Breadcrumb <a class="text-muted" href="#component-breadcrumb">#</a></h3>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active">Library</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item"><a href="#">Library</a></li>
+  <li class="breadcrumb-item active">Data</li>
+</ol>
+
+    
+
+<h3 id="component-cards">Cards <a class="text-muted" href="#component-cards">#</a></h3>
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-primary text-white mb-3">
+    <div class="card-header">Primary</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-secondary text-white mb-3">
+    <div class="card-header">Secondary</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-light mb-3">
+    <div class="card-header">Light</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-dark text-white mb-3">
+    <div class="card-header">Dark</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-success text-white mb-3">
+    <div class="card-header">Success</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-info text-white mb-3">
+    <div class="card-header">Info</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-warning mb-3">
+    <div class="card-header">Warning</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card bg-danger text-white mb-3">
+    <div class="card-header">Danger</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-primary mb-3">
+    <div class="card-header">Primary</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-secondary mb-3">
+    <div class="card-header">Secondary</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-light mb-3">
+    <div class="card-header">Light</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-dark mb-3">
+    <div class="card-header">Dark</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-success mb-3">
+    <div class="card-header">Success</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-info mb-3">
+    <div class="card-header">Info</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-warning mb-3">
+    <div class="card-header">Warning</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="col-md-6 col-xl-3">
+    
+  <div class="card border-danger mb-3">
+    <div class="card-header">Danger</div>
+    <div class="card-body">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et orci metus.</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+    <h3 id="component-modal">Modal <a class="text-muted" href="#component-modal">#</a></h3>
+<div class="modal-wrapper mb-3">
+  <div class="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae lacus luctus, convallis libero iaculis, mollis nisi.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3 id="component-tabs">Tabs <a class="text-muted" href="#component-tabs">#</a></h3>
+<ul class="nav nav-tabs mb-3" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="tabs-home-tab" data-toggle="tab" href="#tabs-home" aria-controls="pills-home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="tabs-profile-tab" data-toggle="tab" href="#tabs-profile" aria-controls="tabs-profile" aria-selected="false">Profile</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="tabs-home" role="tabpanel" aria-labelledby="tabs-home-tab">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a convallis mauris.
+  </div>
+  <div class="tab-pane fade" id="tabs-profile" role="tabpanel" aria-labelledby="tabs-profile-tab">
+    Donec consectetur dui eget massa pharetra, sit amet sagittis metus porttitor.
+  </div>
+</div>
+
+      </div>
+      <div class="col-md-6">
+        <h3 id="component-pills">Pills <a class="text-muted" href="#component-pills">#</a></h3>
+<ul class="nav nav-pills mb-3" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" aria-controls="pills-home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" aria-controls="pills-profile" aria-selected="false">Profile</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a convallis mauris.
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    Donec consectetur dui eget massa pharetra, sit amet sagittis metus porttitor.
+  </div>
+</div>
+
+      </div>
+    </div>
+    <h3 id="component-list-groups">List groups <a class="text-muted" href="#component-list-groups">#</a></h3>
+<div class="row">
+  <div class="col-md-6 col-lg-4">
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Cras justo odio
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Dapibus ac facilisis in
+        <span class="badge badge-primary badge-pill">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Morbi leo risus
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="list-group mb-3">
+      <a href="#" class="list-group-item list-group-item-action active">
+        Cras justo odio
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        Dapibus ac facilisis in
+      </a>
+      <a href="#" class="list-group-item list-group-item-action disabled">
+        Morbi leo risus
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="list-group mb-3">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1"> Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <h3 id="component-buttons">Buttons <a class="text-muted" href="#component-buttons">#</a></h3>
+<p>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" disabled>Primary</button>
+  <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  <button type="button" class="btn btn-success" disabled>Success</button>
+  <button type="button" class="btn btn-info" disabled>Info</button>
+  <button type="button" class="btn btn-warning" disabled>Warning</button>
+  <button type="button" class="btn btn-danger" disabled>Danger</button>
+  <button type="button" class="btn btn-light" disabled>Light</button>
+  <button type="button" class="btn btn-dark" disabled>Dark</button>
+  <button type="button" class="btn btn-link" disabled>Link</button>
+</p>
+<p>
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</p>
+<div class="w-100 mb-3">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <div class="btn-group" role="group">
+      <button id="dropdown-primary" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-primary">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-success">Success</button>
+    <div class="btn-group" role="group">
+      <button id="dropdown-success" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-success">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-info">Info</button>
+    <div class="btn-group" role="group">
+      <button id="dropdown-info" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-info">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-warning">Warning</button>
+    <div class="btn-group" role="group">
+      <button id="dropdown-warning" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-warning">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-danger">Danger</button>
+    <div class="btn-group" role="group">
+      <button id="dropdown-danger" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-danger">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+      </div>
+    </div>
+  </div>
+</div>
+<p>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" class="btn btn-primary">Normal</button>
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
+</p>
+<div class="w-100 mb-3">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+</div>
+<div class="w-100 mb-3">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group mr-2" role="group">
+      <button type="button" class="btn btn-primary">New</button>
+      <button type="button" class="btn btn-primary">Open</button>
+    </div>
+    <div class="btn-group mr-2" role="group">
+      <button type="button" class="btn btn-primary">Cut</button>
+      <button type="button" class="btn btn-primary">Copy</button>
+      <button type="button" class="btn btn-primary">Paste</button>
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary">Compile</button>
+    </div>
+  </div>
+</div>
+<div class="w-100 mb-3">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <input type="checkbox" checked> Checkbox
+    </label>
+    <label class="btn btn-primary">
+      <input type="checkbox"> Checkbox
+    </label>
+    <label class="btn btn-primary">
+      <input type="checkbox"> Checkbox
+    </label>
+  </div>
+</div>
+<div class="w-100 mb-3">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <input type="radio" checked> Radio
+    </label>
+    <label class="btn btn-primary">
+      <input type="radio"> Radio
+    </label>
+    <label class="btn btn-primary">
+      <input type="radio"> Radio
+    </label>
+  </div>
+</div>
+
+    <h3 id="component-pagination">Pagination <a class="text-muted" href="#component-pagination">#</a></h3>
+<div class="w-100">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
+<div class="w-100">
+  <ul class="pagination pagination-lg">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
+<div class="w-100">
+  <ul class="pagination pagination-sm">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
+
+    
+
+<h3 id="component-alerts">Alerts <a class="text-muted" href="#component-alerts">#</a></h3>
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Success!</h4>
+  <p class="mb-0">Duis sollicitudin velit nec sagittis aliquet. Integer <a href="#" class="alert-link">ultrices diam blandit dictum</a> convallis. Curabitur rutrum nunc nulla, quis congue ante consectetur eu.</p>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    
+  <div class="alert alert-dismissible alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Info!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+  <div class="col-md-4">
+    
+  <div class="alert alert-dismissible alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Warning!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+  <div class="col-md-4">
+    
+  <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Danger!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    
+  <div class="alert alert-dismissible alert-primary">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Primary!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+  <div class="col-md-3">
+    
+  <div class="alert alert-dismissible alert-secondary">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Secondary!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+  <div class="col-md-3">
+    
+  <div class="alert alert-dismissible alert-light">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Light!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+  <div class="col-md-3">
+    
+  <div class="alert alert-dismissible alert-dark">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Dark!</strong> Phasellus vehicula purus sed <a href="#" class="alert-link">libero lobortis</a> egestas.
+  </div>
+
+  </div>
+</div>
+
+    <h3 id="component-badges">Badges <a class="text-muted" href="#component-badges">#</a></h3>
+<p>
+  <span class="badge badge-primary">Primary</span>
+  <span class="badge badge-secondary">Secondary</span>
+  <span class="badge badge-success">Success</span>
+  <span class="badge badge-danger">Danger</span>
+  <span class="badge badge-warning">Warning</span>
+  <span class="badge badge-info">Info</span>
+  <span class="badge badge-light">Light</span>
+  <span class="badge badge-dark">Dark</span>
+</p>
+<p>
+  <span class="badge badge-pill badge-primary">Primary</span>
+  <span class="badge badge-pill badge-secondary">Secondary</span>
+  <span class="badge badge-pill badge-success">Success</span>
+  <span class="badge badge-pill badge-danger">Danger</span>
+  <span class="badge badge-pill badge-warning">Warning</span>
+  <span class="badge badge-pill badge-info">Info</span>
+  <span class="badge badge-pill badge-light">Light</span>
+  <span class="badge badge-pill badge-dark">Dark</span>
+</p>
+
+    
+
+<h3 id="component-progress-bars">Progress bars <a class="text-muted" href="#component-progress-bars">#</a></h3>
+
+  <div class="progress">
+    <div class="progress-bar " role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
 
 
+  <div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+    <h3 id="component-tables">Tables <a class="text-muted" href="#component-tables">#</a></h3>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Type</th>
+    <th scope="col">Column #1</th>
+    <th scope="col">Column #2</th>
+    <th scope="col">Column #3</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="table-active">
+    <th scope="row">Active</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr>
+    <th scope="row">Default</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-primary">
+    <th scope="row">Primary</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-secondary">
+    <th scope="row">Secondary</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-success">
+    <th scope="row">Success</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-danger">
+    <th scope="row">Danger</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-warning">
+    <th scope="row">Warning</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-info">
+    <th scope="row">Info</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-light">
+    <th scope="row">Light</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  <tr class="table-dark">
+    <th scope="row">Dark</th>
+    <td>Content</td>
+    <td>Content</td>
+    <td>Content</td>
+  </tr>
+  </tbody>
+</table>
+
+    <div class="row">
+      <div class="col-md-6">
+        
+
+<h3 id="component-tooltips">Tooltips <a class="text-muted" href="#component-tooltips">#</a></h3>
+<div class="mb-3">
+  
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+    Top
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+    Right
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+    Bottom
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+    Left
+  </button>
+
+</div>
+
+      </div>
+      <div class="col-md-6">
+        
+
+<h3 id="component-popovers">Popovers <a class="text-muted" href="#component-popovers">#</a></h3>
+<div class="mb-3">
+  
+  <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" title="Popover" data-placement="top" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+    Top
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" title="Popover" data-placement="right" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+    Right
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" title="Popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+    Bottom
+  </button>
+
+  
+  <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" title="Popover" data-placement="left" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+    Left
+  </button>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
 </body>
 </html>
