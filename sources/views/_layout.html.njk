@@ -5,12 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
   {% endblock %}
   {% block stylesheets %}
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="{{ url_home }}css/bootstrap.css">
   {% endblock %}
 </head>
 <body>
+<header class="mb-3">
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_home }}">Bootpack</a>
+    </div>
+  </nav>
+</header>
 {% block body %}{% endblock %}
 <hr>
 <footer class="container">
