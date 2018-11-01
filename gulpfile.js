@@ -22,7 +22,7 @@ const plumberr = function(error) {
 gulp.task('build', ['css', 'html']);
 
 gulp.task('clean', function () {
-  return del('build/**/*')
+  return del('docs/**/*')
 });
 
 gulp.task('css', function() {
@@ -33,14 +33,14 @@ gulp.task('css', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(using({
       filesize: true,
       prefix: 'Saved '
     }))
     .pipe(cssnano())
     .pipe(extreplace('.min.css', '.css'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(using({
       filesize: true,
       prefix: 'Saved '
@@ -58,7 +58,7 @@ gulp.task('html', function() {
     }))
     .pipe(nunjucks.compile())
     .pipe(extreplace('.html', '.html.njk'))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
     .pipe(using({
       filesize: true,
       prefix: 'Saved '
@@ -69,8 +69,8 @@ gulp.task('html', function() {
 gulp.task('serve', ['build', 'watch'], function() {
   connect.server({
     livereload: true,
-    root: 'build'
-  });
+    root: 'docs'
+  })
 });
 
 gulp.task('watch', function() {
